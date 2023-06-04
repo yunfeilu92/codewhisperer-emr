@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # read the csv file
     df = read_s3_csv_file("yunfeilu-codewhisperer", "emr/data/tripdata.csv")
     # store the df as parquet file
-    # store_df_as_parquet(df, "yunfeilu-codewhisperer", "emr/data/parquet/tripdata.parquet")
+    store_df_as_parquet(df, "yunfeilu-codewhisperer", "emr/data/parquet/tripdata.parquet")
     # count the total number of records
     count_records_df(df)
     # print the schema
