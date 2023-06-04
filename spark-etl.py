@@ -11,8 +11,6 @@ def read_s3_csv_file(bucket_name, file_name):
     spark = SparkSession.builder.appName("Reading s3 csv file").getOrCreate()
     # read the csv file
     df = spark.read.csv("s3://{}/{}".format(bucket_name, file_name), header=True, inferSchema=True)
-    # stop the spark session
-    spark.stop()
     return df
 
 # method to store df as parquet file
